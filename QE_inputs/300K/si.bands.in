@@ -1,0 +1,31 @@
+&CONTROL
+  calculation = 'bands'
+  outdir = './out'
+  prefix = 'si'
+  pseudo_dir = './'
+  verbosity='high'
+/
+&SYSTEM
+  ecutwfc = 60
+  ibrav = 2
+  celldm(1) = 10.169640
+  nat = 2
+  ntyp = 1
+  nbnd = 10
+/
+&ELECTRONS
+    diagonalization='david'
+    mixing_mode = 'plain'
+    mixing_beta = 0.7
+    conv_thr = 1.0d-10
+/
+ATOMIC_SPECIES
+Si     28.0855 Si.pz-hgh.UPF
+K_POINTS {crystal_b}
+2
+0.000000   0.000000   0.000000  100
+0.000000   0.500000   0.500000    1
+ATOMIC_POSITIONS crystal
+Si           0.0000000000       0.0000000000       0.0000000000 
+Si           0.2500000000       0.2500000000       0.2500000000
+
