@@ -8,15 +8,7 @@
 #SBATCH --output=sdc.txt              # Standard output and error log
 #SBATCH --partition=skylake           # MOAB/Torque called these queues
 
-
-
-
-
-
-
 module load quantum-espresso/7.3.1-intel
-
-
 
 #srun pw.x < si.scf.in > si.scf.out
 srun pw.x < si.nscf.in > si.nscf.out
